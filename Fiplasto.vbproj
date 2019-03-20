@@ -1,0 +1,1862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E5DA282-4ECD-412F-B4F1-6CEECCB6F240}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SPIF.My.MyApplication</StartupObject>
+    <RootNamespace>SPIF</RootNamespace>
+    <AssemblyName>SPIF</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>logo_sin_fiplasto.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ManifestCertificateThumbprint>8E43D5AF33285772CBC5784D530B983DF9888D30</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Fiplasto_2_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>C:\inetpub\wwwroot\Spif2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://localhost/Spif2/</InstallUrl>
+    <TargetCulture>es-AR</TargetCulture>
+    <ProductName>Sistema de Producción Integrado Fiplasto</ProductName>
+    <PublisherName>SPIF</PublisherName>
+    <SuiteName>SPIF</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>http://localhost/recibos_online/crystalreports10_5</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SPIF.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SPIF.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SPIF.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SPIF.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SendMailTask, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=5.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABMProdAlis.Designer.vb">
+      <DependentUpon>MenuConf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\AlisRep.Designer.vb">
+      <DependentUpon>AlisRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\AlisRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basicos\BasicosRep.Designer.vb">
+      <DependentUpon>BasicosRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Basicos\BasicosRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basicos\cProduccion.vb" />
+    <Compile Include="Basicos\cRepo.vb" />
+    <Compile Include="Basicos\frmRepoBasicos.Designer.vb">
+      <DependentUpon>frmRepoBasicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Basicos\frmRepoBasicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cMenu.vb" />
+    <Compile Include="CZ\Reportes\CZReporte.vb" />
+    <Compile Include="DataSetEnsayosMC1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEnsayosMC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FnMenu.vb" />
+    <Compile Include="LAV\ABMInox.Designer.vb">
+      <DependentUpon>ABMInox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\ABMInox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\CMaestroInox.vb" />
+    <Compile Include="LAV\Reportes\LavReporte.vb" />
+    <Compile Include="M48\frmRepoViewM48.Designer.vb">
+      <DependentUpon>frmRepoViewM48.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\frmRepoViewM48.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Madera\Reportes\MadReporte.vb" />
+    <Compile Include="MC\Reportes\MCReporte.vb" />
+    <Compile Include="MenuConf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alistamiento\ABMProdAlis.Designer.vb">
+      <DependentUpon>ABMProdAlis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\ABMProdAlis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alistamiento\abmProductos.vb" />
+    <Compile Include="Alistamiento\frmRepoAlist.Designer.vb">
+      <DependentUpon>frmRepoAlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\frmRepoAlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alistamiento\ProdClasificadora.Designer.vb">
+      <DependentUpon>ProdClasificadora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\ProdClasificadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alistamiento\ProdMohog.Designer.vb">
+      <DependentUpon>ProdMohog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alistamiento\ProdMohog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\ABMPilaBIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\AjusteBio.Designer.vb">
+      <DependentUpon>AjusteBio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\AjusteBio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\Biomasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\TRMADBIO.Designer.vb">
+      <DependentUpon>TRMADBIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\TRMADBIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\frmrepBiomasa.Designer.vb">
+      <DependentUpon>frmrepBiomasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\frmrepBiomasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\InfContBioRep.Designer.vb">
+      <DependentUpon>InfContBioRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\InfContBioRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\IngCamBioRep.Designer.vb">
+      <DependentUpon>IngCamBioRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\IngCamBioRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\rptInfContBio.vb">
+      <DependentUpon>rptInfContBio.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DSAlistamiento.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSAlistamiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSAlistamiento.vb">
+      <DependentUpon>DSAlistamiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\CamposMad.Designer.vb">
+      <DependentUpon>CamposMad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\CamposMad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Madera\MaderaRep.Designer.vb">
+      <DependentUpon>MaderaRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\MaderaRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Madera\Proveedores.Designer.vb">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Madera\Remitos.Designer.vb">
+      <DependentUpon>Remitos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\Remitos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Madera\RepoViewMadera.Designer.vb">
+      <DependentUpon>RepoViewMadera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Madera\RepoViewMadera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelesOpciones.Designer.vb">
+      <DependentUpon>PanelesOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelGraficos.Designer.vb">
+      <DependentUpon>PanelGraficos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PanelGraficos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\frmreppicadora.Designer.vb">
+      <DependentUpon>frmreppicadora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\frmreppicadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCCIONDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCCIONDataSet.vb">
+      <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\ABMUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\ABMZorras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\ABMCZDefectos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\ABMCZDEFDESC.Designer.vb">
+      <DependentUpon>ABMCZDEFDESC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\ABMCZDEFDESC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\ABMCZAverias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\ABMLAVDecorativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basicos\Produccion.Designer.vb">
+      <DependentUpon>Produccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Basicos\Produccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\frmREPOViewVarios.Designer.vb">
+      <DependentUpon>frmREPOViewVarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\frmREPOViewVarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LavReparRep.Designer.vb">
+      <DependentUpon>LavReparRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LavReparRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVREPARACION.Designer.vb">
+      <DependentUpon>LAVREPARACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVREPARACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McLimpVacio.Designer.vb">
+      <DependentUpon>McLimpVacio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McLimpVacio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\PIModiMad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\frmREPOViewPic.Designer.vb">
+      <DependentUpon>frmREPOViewPic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\frmREPOViewPic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVGralrep.Designer.vb">
+      <DependentUpon>LAVGralrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVGralrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVSODArep.Designer.vb">
+      <DependentUpon>LAVSODArep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVSODArep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVINOXrep.Designer.vb">
+      <DependentUpon>LAVINOXrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVINOXrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVDECOrep.Designer.vb">
+      <DependentUpon>LAVDECOrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVDECOrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVCCPrep.Designer.vb">
+      <DependentUpon>LAVCCPrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVCCPrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVCHTRrep.Designer.vb">
+      <DependentUpon>LAVCHTRrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVCHTRrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\frmREPOViewLav.Designer.vb">
+      <DependentUpon>frmREPOViewLav.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\frmREPOViewLav.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVTDHrep.Designer.vb">
+      <DependentUpon>LAVTDHrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVTDHrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVSoda.Designer.vb">
+      <DependentUpon>LAVSoda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVSoda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVLimpCubas.Designer.vb">
+      <DependentUpon>LAVLimpCubas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVLimpCubas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVDECO.Designer.vb">
+      <DependentUpon>LAVDECO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVDECO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVINOX.Designer.vb">
+      <DependentUpon>LAVINOX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVINOX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVCCP.Designer.vb">
+      <DependentUpon>LAVCCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVCCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVCHTR.Designer.vb">
+      <DependentUpon>LAVCHTR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVCHTR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LAV\LAVTDH.Designer.vb">
+      <DependentUpon>LAVTDH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LAV\LAVTDH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIPLANEWDataSetTotal.vb">
+      <DependentUpon>FIPLANEWDataSetTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\frmrepCZ.Designer.vb">
+      <DependentUpon>frmrepCZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\frmrepCZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZConfRepZorras.Designer.vb">
+      <DependentUpon>CZConfRepZorras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZConfRepZorras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZEstadoZorras.Designer.vb">
+      <DependentUpon>CZEstadoZorras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZEstadoZorras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\frmREPOViewCZ.Designer.vb">
+      <DependentUpon>frmREPOViewCZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\frmREPOViewCZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZrep.Designer.vb">
+      <DependentUpon>CZrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\NovedVisual.Designer.vb">
+      <DependentUpon>NovedVisual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\NovedVisual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZRotulador.Designer.vb">
+      <DependentUpon>CZRotulador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZRotulador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZRegistroDescartes.Designer.vb">
+      <DependentUpon>CZRegistroDescartes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZRegistroDescartes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZRegistroEspesores.Designer.vb">
+      <DependentUpon>CZRegistroEspesores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZRegistroEspesores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZCtrlDim.Designer.vb">
+      <DependentUpon>CZCtrlDim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZCtrlDim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\CZZorrasCargadas.Designer.vb">
+      <DependentUpon>CZZorrasCargadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CZ\CZZorrasCargadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McLimpTQBL.Designer.vb">
+      <DependentUpon>McLimpTQBL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McLimpTQBL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIPLANEWCamion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIPLANEWCamion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FIPLANEWCamion.vb">
+      <DependentUpon>FIPLANEWCamion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FIPLANEWDataSetTotal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIPLANEWDataSetTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MC\frmREPOViewMC.Designer.vb">
+      <DependentUpon>frmREPOViewMC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\frmREPOViewMC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CZ\Reportes\rptCZDescartes.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCZDescartes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M48\Reportes\rptM48var.vb">
+      <DependentUpon>rptM48var.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="M48\CtrlVar.Designer.vb">
+      <DependentUpon>CtrlVar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\CtrlVar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\Reportes\rptMCTelas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMCTelas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MC\frmrepMC.Designer.vb">
+      <DependentUpon>frmrepMC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\frmrepMC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\MCrep.Designer.vb">
+      <DependentUpon>MCrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\MCrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McLimpCVVac.Designer.vb">
+      <DependentUpon>McLimpCVVac.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McLimpCVVac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\HsProdParRep.Designer.vb">
+      <DependentUpon>HsProdParRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\HsProdParRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSParafinaIn.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSParafinaIn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSParafinaIn.vb">
+      <DependentUpon>DSParafinaIn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McParafinaIn.Designer.vb">
+      <DependentUpon>McParafinaIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McParafinaIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McTelas.Designer.vb">
+      <DependentUpon>McTelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McTelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSetMCEnsayo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMCEnsayo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTQ3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTQ3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FIPLANEWDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIPLANEWDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McEnsayos.Designer.vb">
+      <DependentUpon>McEnsayos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McEnsayos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M48\frmrepm48.Designer.vb">
+      <DependentUpon>frmrepm48.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\frmrepm48.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M48\M48rep.Designer.vb">
+      <DependentUpon>M48rep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\M48rep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\NovRespVisto.Designer.vb">
+      <DependentUpon>NovRespVisto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\NovRespVisto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\NovedadesVisto.Designer.vb">
+      <DependentUpon>NovedadesVisto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\NovedadesVisto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McHipoclorito.Designer.vb">
+      <DependentUpon>McHipoclorito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McHipoclorito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McParafina.Designer.vb">
+      <DependentUpon>McParafina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McParafina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McCuchillas.Designer.vb">
+      <DependentUpon>McCuchillas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McCuchillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\IO.Designer.vb">
+      <DependentUpon>IO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\IO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\IngCamionrep.Designer.vb">
+      <DependentUpon>IngCamionrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\IngCamionrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MC\McVarProc.Designer.vb">
+      <DependentUpon>McVarProc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MC\McVarProc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\Reportes\rptCamRech.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCamRech.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rpteficParArea.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpteficParArea.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PIC\Reportes\rptingcam.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptingcam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M48\Reportes\rptM48ctrlfibras.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptM48ctrlfibras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rpttareas.vb">
+      <DependentUpon>rpttareas.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VARIOS\TareasRep.Designer.vb">
+      <DependentUpon>TareasRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\TareasRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="PIC\ABMTipMad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\ABMPila.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\ABMMotivosNC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\ABMCausaPilaInc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMMaquinas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMParadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMCausa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMMotivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMReparo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\ABMMotivosPI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ABMPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\AjuInventario.Designer.vb">
+      <DependentUpon>AjuInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\AjuInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\AjTrRep.Designer.vb">
+      <DependentUpon>AjTrRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\AjTrRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\EfiPicRep.Designer.vb">
+      <DependentUpon>EfiPicRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\EfiPicRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\InfContMadRep.Designer.vb">
+      <DependentUpon>InfContMadRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\InfContMadRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\Reportes\rptInfContMad1.vb">
+      <DependentUpon>rptInfContMad.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\TareaResp.Designer.vb">
+      <DependentUpon>TareaResp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\TareaResp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\Tareas.designer.vb">
+      <DependentUpon>Tareas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\Tareas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIPLANEWDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FIPLANEWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tareasads.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tareasads.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\TransfMadVig.Designer.vb">
+      <DependentUpon>TransfMadVig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\TransfMadVig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M48\CtrlSulfEns.Designer.vb">
+      <DependentUpon>CtrlSulfEns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\CtrlSulfEns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M48\CtrlFibras.Designer.vb">
+      <DependentUpon>CtrlFibras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\CtrlFibras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M48\CtrlSulfato.Designer.vb">
+      <DependentUpon>CtrlSulfato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M48\CtrlSulfato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\MadePicRep.Designer.vb">
+      <DependentUpon>MadePicRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\MadePicRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\NivelSilos.Designer.vb">
+      <DependentUpon>NivelSilos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\NivelSilos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\NivSilosRep.Designer.vb">
+      <DependentUpon>NivSilosRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\NivSilosRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\Novedadesrep.Designer.vb">
+      <DependentUpon>Novedadesrep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\Novedadesrep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\ParadasRep.Designer.vb">
+      <DependentUpon>ParadasRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\ParadasRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\password.Designer.vb">
+      <DependentUpon>password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\Pilapic.Designer.vb">
+      <DependentUpon>Pilapic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PIC\Pilapic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rptNovedades.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNovedades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rptparamens.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptparamens.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PIC\Reportes\rptParaPicDia.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptParaPicDia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PIC\Reportes\rptParaPicEquipos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptParaPicEquipos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rptSector.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSector.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VARIOS\frmrepgenerales.Designer.vb">
+      <DependentUpon>frmrepgenerales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\frmrepgenerales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\Novedades.Designer.vb">
+      <DependentUpon>Novedades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\Novedades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\Paradas.Designer.vb">
+      <DependentUpon>Paradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\Paradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\permisos.Designer.vb">
+      <DependentUpon>permisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VARIOS\permisos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VARIOS\rptParadas1.vb">
+      <DependentUpon>rptParadas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="PIC\SalidaCamion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\RecepcionMadera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIC\IngresoRemito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ini.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.vb">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VARIOS\ABMUnidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alistamiento\ABMProdAlis.resx">
+      <DependentUpon>ABMProdAlis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alistamiento\AlisRep.resx">
+      <DependentUpon>AlisRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alistamiento\frmRepoAlist.resx">
+      <DependentUpon>frmRepoAlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alistamiento\ProdClasificadora.resx">
+      <DependentUpon>ProdClasificadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alistamiento\ProdMohog.resx">
+      <DependentUpon>ProdMohog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basicos\BasicosRep.resx">
+      <DependentUpon>BasicosRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basicos\frmRepoBasicos.resx">
+      <DependentUpon>frmRepoBasicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\ABMPilaBIO.resx">
+      <DependentUpon>ABMPilaBIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\AjusteBio.resx">
+      <DependentUpon>AjusteBio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\Biomasa.resx">
+      <DependentUpon>Biomasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\TRMADBIO.resx">
+      <DependentUpon>TRMADBIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\frmrepBiomasa.resx">
+      <DependentUpon>frmrepBiomasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\InfContBioRep.resx">
+      <DependentUpon>InfContBioRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\IngCamBioRep.resx">
+      <DependentUpon>IngCamBioRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\rptInfContBio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInfContBio.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\ABMCZDEFDESC.resx">
+      <DependentUpon>ABMCZDEFDESC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\Reportes\rptCzRech.rdlc" />
+    <EmbeddedResource Include="LAV\ABMInox.resx">
+      <DependentUpon>ABMInox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\frmRepoViewM48.resx">
+      <DependentUpon>frmRepoViewM48.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\Reportes\rptM48Bolsas.rdlc" />
+    <EmbeddedResource Include="Madera\CamposMad.resx">
+      <DependentUpon>CamposMad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Madera\Reportes\rptInfMadTerceros.rdlc" />
+    <EmbeddedResource Include="Madera\Reportes\rptInfCampos.rdlc" />
+    <EmbeddedResource Include="Madera\MaderaRep.resx">
+      <DependentUpon>MaderaRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Madera\Proveedores.resx">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Madera\Remitos.resx">
+      <DependentUpon>Remitos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Madera\RepoViewMadera.resx">
+      <DependentUpon>RepoViewMadera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\Reportes\rptMcCuchillas.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMcHipo.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMcLimpVac.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCVacVal.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCParafina.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCParafCon.rdlc" />
+    <EmbeddedResource Include="MenuConf.resx">
+      <DependentUpon>MenuConf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesOpciones.resx">
+      <DependentUpon>PanelesOpciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelGraficos.resx">
+      <DependentUpon>PanelGraficos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\frmreppicadora.resx">
+      <DependentUpon>frmreppicadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Madera\Reportes\rptIngMad.rdlc" />
+    <EmbeddedResource Include="Madera\Reportes\rptInfServicios.rdlc" />
+    <EmbeddedResource Include="Alistamiento\rptSierra.rdlc" />
+    <EmbeddedResource Include="Alistamiento\rptAlistamiento.rdlc" />
+    <EmbeddedResource Include="Basicos\rptParadasBasicos.rdlc" />
+    <EmbeddedResource Include="Basicos\rptParadasDiario.rdlc" />
+    <EmbeddedResource Include="Basicos\rptProduccion.rdlc" />
+    <EmbeddedResource Include="Basicos\rptNovedadesBas.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptAjuInv.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptEfiPic.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptNivSilos.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptRealVsObjetivoPicadora.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptTnPic.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptTnPicMes.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptTransfVig.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rtpStockPlayaXVariedad.rdlc" />
+    <EmbeddedResource Include="VARIOS\ABMUsuario.resx">
+      <DependentUpon>ABMUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\ABMTipMad.resx">
+      <DependentUpon>ABMTipMad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\ABMPila.resx">
+      <DependentUpon>ABMPila.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\ABMMotivosNC.resx">
+      <DependentUpon>ABMMotivosNC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\ABMCausaPilaInc.resx">
+      <DependentUpon>ABMCausaPilaInc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMMaquinas.resx">
+      <DependentUpon>ABMMaquinas.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMParadas.resx">
+      <DependentUpon>ABMParadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMSector.resx">
+      <DependentUpon>ABMSector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMCausa.resx">
+      <DependentUpon>ABMCausa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMMotivo.resx">
+      <DependentUpon>ABMMotivo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMReparo.resx">
+      <DependentUpon>ABMReparo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMArea.resx">
+      <DependentUpon>ABMArea.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\ABMZorras.resx">
+      <DependentUpon>ABMZorras.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\ABMCZDefectos.resx">
+      <DependentUpon>ABMCZDefectos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\ABMCZAverias.resx">
+      <DependentUpon>ABMCZAverias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\ABMLAVDecorativo.resx">
+      <DependentUpon>ABMLAVDecorativo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basicos\Produccion.resx">
+      <DependentUpon>Produccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\frmREPOViewVarios.resx">
+      <DependentUpon>frmREPOViewVarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LavReparRep.resx">
+      <DependentUpon>LavReparRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVREPARACION.resx">
+      <DependentUpon>LAVREPARACION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McLimpVacio.resx">
+      <DependentUpon>McLimpVacio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\PIModiMad.resx">
+      <DependentUpon>PIModiMad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\frmREPOViewPic.resx">
+      <DependentUpon>frmREPOViewPic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptCamAviso.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptEsquemaPlaya.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCCPVida.rdlc" />
+    <EmbeddedResource Include="LAV\LAVGralrep.resx">
+      <DependentUpon>LAVGralrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCHTRVida.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLavGral.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVINOXVida.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVLIMPCUBA.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLavReparac.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVSODATYC.rdlc" />
+    <EmbeddedResource Include="LAV\LAVSODArep.resx">
+      <DependentUpon>LAVSODArep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\Reportes\rptLAVINOXE.rdlc" />
+    <EmbeddedResource Include="LAV\LAVINOXrep.resx">
+      <DependentUpon>LAVINOXrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVDECOrep.resx">
+      <DependentUpon>LAVDECOrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCCPE.rdlc" />
+    <EmbeddedResource Include="LAV\LAVCCPrep.resx">
+      <DependentUpon>LAVCCPrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCCPI.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCHTRE.rdlc" />
+    <EmbeddedResource Include="LAV\LAVCHTRrep.resx">
+      <DependentUpon>LAVCHTRrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\Reportes\rptLAVCHTRI.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVDECO.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVINOXI.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVSODAS.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHC.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHR.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHB.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHN.rdlc" />
+    <EmbeddedResource Include="LAV\frmREPOViewLav.resx">
+      <DependentUpon>frmREPOViewLav.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVTDHrep.resx">
+      <DependentUpon>LAVTDHrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVSoda.resx">
+      <DependentUpon>LAVSoda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVLimpCubas.resx">
+      <DependentUpon>LAVLimpCubas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVDECO.resx">
+      <DependentUpon>LAVDECO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVINOX.resx">
+      <DependentUpon>LAVINOX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVCCP.resx">
+      <DependentUpon>LAVCCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVCHTR.resx">
+      <DependentUpon>LAVCHTR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LAV\LAVTDH.resx">
+      <DependentUpon>LAVTDH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\Reportes\rptCZCtrlDim.rdlc" />
+    <EmbeddedResource Include="CZ\Reportes\rptCZDescartes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCZDescartes.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\Reportes\rptCZEspesores.rdlc" />
+    <EmbeddedResource Include="CZ\Reportes\rptCZReparacion.rdlc" />
+    <EmbeddedResource Include="CZ\Reportes\rptCZrotulador.rdlc" />
+    <EmbeddedResource Include="CZ\Reportes\rptCZtblaceptados.rdlc" />
+    <EmbeddedResource Include="CZ\frmrepCZ.resx">
+      <DependentUpon>frmrepCZ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZConfRepZorras.resx">
+      <DependentUpon>CZConfRepZorras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZEstadoZorras.resx">
+      <DependentUpon>CZEstadoZorras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\frmREPOViewCZ.resx">
+      <DependentUpon>frmREPOViewCZ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZrep.resx">
+      <DependentUpon>CZrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\NovedVisual.resx">
+      <DependentUpon>NovedVisual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZRotulador.resx">
+      <DependentUpon>CZRotulador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZRegistroDescartes.resx">
+      <DependentUpon>CZRegistroDescartes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZRegistroEspesores.resx">
+      <DependentUpon>CZRegistroEspesores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZCtrlDim.resx">
+      <DependentUpon>CZCtrlDim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\CZZorrasCargadas.resx">
+      <DependentUpon>CZZorrasCargadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McLimpTQBL.resx">
+      <DependentUpon>McLimpTQBL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\frmREPOViewMC.resx">
+      <DependentUpon>frmREPOViewMC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\Reportes\rptCZtblpren.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHL.rdlc" />
+    <EmbeddedResource Include="LAV\Reportes\rptLAVTDHVida.rdlc" />
+    <EmbeddedResource Include="M48\Reportes\Rptm48ensayo.rdlc" />
+    <EmbeddedResource Include="M48\Reportes\rptM48var.rdlc" />
+    <EmbeddedResource Include="M48\Reportes\rptM48var.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptM48var.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\CtrlVar.resx">
+      <DependentUpon>CtrlVar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\Reportes\rptMCEnsMaq.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCEnsTQ.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCVarProc.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCTelas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMCTelas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\frmrepMC.resx">
+      <DependentUpon>frmrepMC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\MCrep.resx">
+      <DependentUpon>MCrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McLimpCVVac.resx">
+      <DependentUpon>McLimpCVVac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\HsProdParRep.resx">
+      <DependentUpon>HsProdParRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McParafinaIn.resx">
+      <DependentUpon>McParafinaIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McTelas.resx">
+      <DependentUpon>McTelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McEnsayos.resx">
+      <DependentUpon>McEnsayos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\frmrepm48.resx">
+      <DependentUpon>frmrepm48.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\M48rep.resx">
+      <DependentUpon>M48rep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\NovRespVisto.resx">
+      <DependentUpon>NovRespVisto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\NovedadesVisto.resx">
+      <DependentUpon>NovedadesVisto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McHipoclorito.resx">
+      <DependentUpon>McHipoclorito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McParafina.resx">
+      <DependentUpon>McParafina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McCuchillas.resx">
+      <DependentUpon>McCuchillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\IO.resx">
+      <DependentUpon>IO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\IngCamionrep.resx">
+      <DependentUpon>IngCamionrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MC\McVarProc.resx">
+      <DependentUpon>McVarProc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptCamRech.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCamRech.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rpteficParArea.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpteficParArea.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptingcam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptingcam.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\Reportes\rptM48ctrlfibras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptM48ctrlfibras.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rptIdDescripcion.rdlc" />
+    <EmbeddedResource Include="VARIOS\rptNovedades.rdlc" />
+    <EmbeddedResource Include="PIC\Reportes\rptPicRajadora.rdlc" />
+    <EmbeddedResource Include="VARIOS\rpttareas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpttareas.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CZ\Reportes\rptCZPromEspesores.rdlc" />
+    <EmbeddedResource Include="VARIOS\TareasRep.resx">
+      <DependentUpon>TareasRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\ABMMotivosPI.resx">
+      <DependentUpon>ABMMotivosPI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMPerfil.resx">
+      <DependentUpon>ABMPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\AjuInventario.resx">
+      <DependentUpon>AjuInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\AjTrRep.resx">
+      <DependentUpon>AjTrRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\EfiPicRep.resx">
+      <DependentUpon>EfiPicRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\InfContMadRep.resx">
+      <DependentUpon>InfContMadRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptInfContMad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInfContMad1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\TareaResp.resx">
+      <DependentUpon>TareaResp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\Tareas.resx">
+      <DependentUpon>Tareas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\TransfMadVig.resx">
+      <DependentUpon>TransfMadVig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\CtrlSulfEns.resx">
+      <DependentUpon>CtrlSulfEns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\CtrlFibras.resx">
+      <DependentUpon>CtrlFibras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M48\CtrlSulfato.resx">
+      <DependentUpon>CtrlSulfato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\MadePicRep.resx">
+      <DependentUpon>MadePicRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\NivelSilos.resx">
+      <DependentUpon>NivelSilos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\NivSilosRep.resx">
+      <DependentUpon>NivSilosRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\Novedadesrep.resx">
+      <DependentUpon>Novedadesrep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ParadasRep.resx">
+      <DependentUpon>ParadasRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\password.resx">
+      <DependentUpon>password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Pilapic.resx">
+      <DependentUpon>Pilapic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rptNovedades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNovedades.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rptparamens.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptparamens.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptParaPicDia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptParaPicDia.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\Reportes\rptParaPicEquipos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptParaPicEquipos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rptSector.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSector.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\frmrepgenerales.resx">
+      <DependentUpon>frmrepgenerales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\Novedades.resx">
+      <DependentUpon>Novedades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\Paradas.resx">
+      <DependentUpon>Paradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\permisos.resx">
+      <DependentUpon>permisos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\rptParadas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptParadas1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\SalidaCamion.resx">
+      <DependentUpon>SalidaCamion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\RecepcionMadera.resx">
+      <DependentUpon>RecepcionMadera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIC\IngresoRemito.resx">
+      <DependentUpon>IngresoRemito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VARIOS\ABMUnidades.resx">
+      <DependentUpon>ABMUnidades.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetEnsayosMC.xsc">
+      <DependentUpon>DataSetEnsayosMC.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEnsayosMC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEnsayosMC1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetEnsayosMC.xss">
+      <DependentUpon>DataSetEnsayosMC.xsd</DependentUpon>
+    </None>
+    <None Include="Fiplasto_1_TemporaryKey.pfx" />
+    <None Include="Fiplasto_2_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram3.cd" />
+    <None Include="DataSetMCEnsayo.xsc">
+      <DependentUpon>DataSetMCEnsayo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMCEnsayo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMCEnsayo.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMCEnsayo.xss">
+      <DependentUpon>DataSetMCEnsayo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTQ3.xsc">
+      <DependentUpon>DataSetTQ3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTQ3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTQ3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetTQ3.xss">
+      <DependentUpon>DataSetTQ3.xsd</DependentUpon>
+    </None>
+    <None Include="DSAlistamiento.xsc">
+      <DependentUpon>DSAlistamiento.xsd</DependentUpon>
+    </None>
+    <None Include="DSAlistamiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSAlistamiento.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSAlistamiento.xss">
+      <DependentUpon>DSAlistamiento.xsd</DependentUpon>
+    </None>
+    <None Include="DSParafinaIn.xsc">
+      <DependentUpon>DSParafinaIn.xsd</DependentUpon>
+    </None>
+    <None Include="DSParafinaIn.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSParafinaIn.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSParafinaIn.xss">
+      <DependentUpon>DSParafinaIn.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWCamion.xsc">
+      <DependentUpon>FIPLANEWCamion.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWCamion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FIPLANEWCamion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FIPLANEWCamion.xss">
+      <DependentUpon>FIPLANEWCamion.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSet.xsc">
+      <DependentUpon>FIPLANEWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FIPLANEWDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FIPLANEWDataSet.xss">
+      <DependentUpon>FIPLANEWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSet1.xsc">
+      <DependentUpon>FIPLANEWDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FIPLANEWDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FIPLANEWDataSet1.xss">
+      <DependentUpon>FIPLANEWDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSetTotal.xsc">
+      <DependentUpon>FIPLANEWDataSetTotal.xsd</DependentUpon>
+    </None>
+    <None Include="FIPLANEWDataSetTotal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FIPLANEWDataSetTotal.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FIPLANEWDataSetTotal.xss">
+      <DependentUpon>FIPLANEWDataSetTotal.xsd</DependentUpon>
+    </None>
+    <None Include="Fiplasto_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="PRODUCCIONDataSet.xsc">
+      <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRODUCCIONDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRODUCCIONDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRODUCCIONDataSet.xss">
+      <DependentUpon>PRODUCCIONDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Tareasads.xsc">
+      <DependentUpon>Tareasads.xsd</DependentUpon>
+    </None>
+    <None Include="Tareasads.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tareasads.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Tareasads.xss">
+      <DependentUpon>Tareasads.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_chico.ico" />
+    <Content Include="logo_sin_fiplasto.ico" />
+    <Content Include="Resources\Arrow Down.png" />
+    <Content Include="Resources\Arrow Down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.Office.Interop.Excel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DtsMsg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Msxml6_interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlTDiagM">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

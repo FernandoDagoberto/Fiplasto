@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PRODUCCIONDataSet" targetNamespace="http://tempuri.org/PRODUCCIONDataSet.xsd" xmlns:mstns="http://tempuri.org/PRODUCCIONDataSet.xsd" xmlns="http://tempuri.org/PRODUCCIONDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PRODUCCIONConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PRODUCCIONConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SPIF.My.MySettings.GlobalReference.Default.PRODUCCIONConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="FIPLANEWConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FIPLANEWConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SPIF.My.MySettings.GlobalReference.Default.FIPLANEWConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ParadasBasicosTableAdapter" GeneratorDataComponentClassName="ParadasBasicosTableAdapter" Name="ParadasBasicos" UserDataComponentName="ParadasBasicosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PRODUCCIONConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PARADA.linea, PARADA.Fecha, COD_PARADA.descripcion, PARADA.tiempo, COD_PARADA.sector, PARADA.tiempo1, PARADA.tiempo2, PARADA.grupo, 
+                         PARADA.observacion, PARADA.causa, PARADA.motivo_id, PARADA.reparo
+FROM            PARADA INNER JOIN
+                         COD_PARADA ON COD_PARADA.codigo = PARADA.parada</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="linea" DataSetColumn="linea" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="tiempo" DataSetColumn="tiempo" />
+              <Mapping SourceColumn="sector" DataSetColumn="sector" />
+              <Mapping SourceColumn="tiempo1" DataSetColumn="tiempo1" />
+              <Mapping SourceColumn="tiempo2" DataSetColumn="tiempo2" />
+              <Mapping SourceColumn="grupo" DataSetColumn="grupo" />
+              <Mapping SourceColumn="observacion" DataSetColumn="observacion" />
+              <Mapping SourceColumn="causa" DataSetColumn="causa" />
+              <Mapping SourceColumn="motivo_id" DataSetColumn="motivo_id" />
+              <Mapping SourceColumn="reparo" DataSetColumn="reparo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prensadasTableAdapter" GeneratorDataComponentClassName="prensadasTableAdapter" Name="prensadas" UserDataComponentName="prensadasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIPLANEWConnectionString (MySettings)" DbObjectName="FIPLANEW.dbo.prensadas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CONVERT(datetime, CONVERT(VARCHAR(10), fecha, 105) + ' ' + CONVERT(varchar(10), hora, 108)) AS Fecha, linea, prensada
+FROM            prensadas
+WHERE        
+(CONVERT(datetime, CONVERT(VARCHAR(10), fecha, 105) + ' ' + CONVERT(varchar(10), hora, 108)) &gt;= @FechaD) 
+AND
+(CONVERT(datetime, CONVERT(VARCHAR(10), fecha, 105) + ' ' + CONVERT(varchar(10), hora, 108)) &lt;= @FechaH)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FechaD" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="DateTime" Direction="Input" ParameterName="@FechaD" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FechaH" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="DateTime" Direction="Input" ParameterName="@FechaH" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="linea" DataSetColumn="linea" />
+              <Mapping SourceColumn="prensada" DataSetColumn="prensada" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PRODUCCIONDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PRODUCCIONDataSet" msprop:Generator_DataSetName="PRODUCCIONDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ParadasBasicos" msprop:Generator_UserTableName="ParadasBasicos" msprop:Generator_RowDeletedName="ParadasBasicosRowDeleted" msprop:Generator_RowChangedName="ParadasBasicosRowChanged" msprop:Generator_RowClassName="ParadasBasicosRow" msprop:Generator_RowChangingName="ParadasBasicosRowChanging" msprop:Generator_RowEvArgName="ParadasBasicosRowChangeEvent" msprop:Generator_RowEvHandlerName="ParadasBasicosRowChangeEventHandler" msprop:Generator_TableClassName="ParadasBasicosDataTable" msprop:Generator_TableVarName="tableParadasBasicos" msprop:Generator_RowDeletingName="ParadasBasicosRowDeleting" msprop:Generator_TablePropName="ParadasBasicos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="linea" msprop:Generator_UserColumnName="linea" msprop:Generator_ColumnVarNameInTable="columnlinea" msprop:Generator_ColumnPropNameInRow="linea" msprop:Generator_ColumnPropNameInTable="lineaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiempo" msprop:Generator_UserColumnName="tiempo" msprop:Generator_ColumnVarNameInTable="columntiempo" msprop:Generator_ColumnPropNameInRow="tiempo" msprop:Generator_ColumnPropNameInTable="tiempoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="sector" msprop:Generator_UserColumnName="sector" msprop:Generator_ColumnVarNameInTable="columnsector" msprop:Generator_ColumnPropNameInRow="sector" msprop:Generator_ColumnPropNameInTable="sectorColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiempo1" msprop:Generator_UserColumnName="tiempo1" msprop:Generator_ColumnVarNameInTable="columntiempo1" msprop:Generator_ColumnPropNameInRow="tiempo1" msprop:Generator_ColumnPropNameInTable="tiempo1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tiempo2" msprop:Generator_UserColumnName="tiempo2" msprop:Generator_ColumnVarNameInTable="columntiempo2" msprop:Generator_ColumnPropNameInRow="tiempo2" msprop:Generator_ColumnPropNameInTable="tiempo2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grupo" msprop:Generator_UserColumnName="grupo" msprop:Generator_ColumnVarNameInTable="columngrupo" msprop:Generator_ColumnPropNameInRow="grupo" msprop:Generator_ColumnPropNameInTable="grupoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="observacion" msprop:Generator_UserColumnName="observacion" msprop:Generator_ColumnVarNameInTable="columnobservacion" msprop:Generator_ColumnPropNameInRow="observacion" msprop:Generator_ColumnPropNameInTable="observacionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="causa" msprop:Generator_UserColumnName="causa" msprop:Generator_ColumnVarNameInTable="columncausa" msprop:Generator_ColumnPropNameInRow="causa" msprop:Generator_ColumnPropNameInTable="causaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="motivo_id" msprop:Generator_UserColumnName="motivo_id" msprop:Generator_ColumnVarNameInTable="columnmotivo_id" msprop:Generator_ColumnPropNameInRow="motivo_id" msprop:Generator_ColumnPropNameInTable="motivo_idColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="reparo" msprop:Generator_UserColumnName="reparo" msprop:Generator_ColumnVarNameInTable="columnreparo" msprop:Generator_ColumnPropNameInRow="reparo" msprop:Generator_ColumnPropNameInTable="reparoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prensadas" msprop:Generator_UserTableName="prensadas" msprop:Generator_RowDeletedName="prensadasRowDeleted" msprop:Generator_RowChangedName="prensadasRowChanged" msprop:Generator_RowClassName="prensadasRow" msprop:Generator_RowChangingName="prensadasRowChanging" msprop:Generator_RowEvArgName="prensadasRowChangeEvent" msprop:Generator_RowEvHandlerName="prensadasRowChangeEventHandler" msprop:Generator_TableClassName="prensadasDataTable" msprop:Generator_TableVarName="tableprensadas" msprop:Generator_RowDeletingName="prensadasRowDeleting" msprop:Generator_TablePropName="prensadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="linea" msprop:Generator_UserColumnName="linea" msprop:Generator_ColumnVarNameInTable="columnlinea" msprop:Generator_ColumnPropNameInRow="linea" msprop:Generator_ColumnPropNameInTable="lineaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prensada" msprop:Generator_UserColumnName="prensada" msprop:Generator_ColumnVarNameInTable="columnprensada" msprop:Generator_ColumnPropNameInRow="prensada" msprop:Generator_ColumnPropNameInTable="prensadaColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InformeProduccion" msprop:Generator_UserTableName="InformeProduccion" msprop:Generator_RowDeletedName="InformeProduccionRowDeleted" msprop:Generator_RowChangedName="InformeProduccionRowChanged" msprop:Generator_RowClassName="InformeProduccionRow" msprop:Generator_RowChangingName="InformeProduccionRowChanging" msprop:Generator_RowEvArgName="InformeProduccionRowChangeEvent" msprop:Generator_RowEvHandlerName="InformeProduccionRowChangeEventHandler" msprop:Generator_TableClassName="InformeProduccionDataTable" msprop:Generator_TableVarName="tableInformeProduccion" msprop:Generator_RowDeletingName="InformeProduccionRowDeleting" msprop:Generator_TablePropName="InformeProduccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Linea" msprop:Generator_UserColumnName="Linea" msprop:Generator_ColumnVarNameInTable="columnLinea" msprop:Generator_ColumnPropNameInRow="Linea" msprop:Generator_ColumnPropNameInTable="LineaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Prensada" msprop:Generator_UserColumnName="Prensada" msprop:Generator_ColumnVarNameInTable="columnPrensada" msprop:Generator_ColumnPropNameInRow="Prensada" msprop:Generator_ColumnPropNameInTable="PrensadaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Producto" msprop:Generator_UserColumnName="Producto" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Factor" msprop:Generator_UserColumnName="Factor" msprop:Generator_ColumnVarNameInTable="columnFactor" msprop:Generator_ColumnPropNameInRow="Factor" msprop:Generator_ColumnPropNameInTable="FactorColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Aberturas" msprop:Generator_UserColumnName="Aberturas" msprop:Generator_ColumnVarNameInTable="columnAberturas" msprop:Generator_ColumnPropNameInRow="Aberturas" msprop:Generator_ColumnPropNameInTable="AberturasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Decorativo" msprop:Generator_UserColumnName="Decorativo" msprop:Generator_ColumnVarNameInTable="columnDecorativo" msprop:Generator_ColumnPropNameInRow="Decorativo" msprop:Generator_ColumnPropNameInTable="DecorativoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Merma" msdata:Caption="Decorativo" msprop:Generator_UserColumnName="Merma" msprop:Generator_ColumnVarNameInTable="columnMerma" msprop:Generator_ColumnPropNameInRow="Merma" msprop:Generator_ColumnPropNameInTable="MermaColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
