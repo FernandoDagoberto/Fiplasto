@@ -109,7 +109,7 @@ Partial Class CZRegistroEspesores
         Me.cbturno.Location = New System.Drawing.Point(345, 22)
         Me.cbturno.Name = "cbturno"
         Me.cbturno.Size = New System.Drawing.Size(86, 25)
-        Me.cbturno.TabIndex = 0
+        Me.cbturno.TabIndex = 1
         Me.cbturno.UseSelectable = True
         '
         'cbgrupo
@@ -122,7 +122,7 @@ Partial Class CZRegistroEspesores
         Me.cbgrupo.Location = New System.Drawing.Point(518, 22)
         Me.cbgrupo.Name = "cbgrupo"
         Me.cbgrupo.Size = New System.Drawing.Size(89, 25)
-        Me.cbgrupo.TabIndex = 1
+        Me.cbgrupo.TabIndex = 2
         Me.cbgrupo.UseSelectable = True
         '
         'cbmatl1
@@ -432,7 +432,7 @@ Partial Class CZRegistroEspesores
         Me.SplitContainer1.Panel2.Controls.Add(Me.txtinf11)
         Me.SplitContainer1.Size = New System.Drawing.Size(741, 290)
         Me.SplitContainer1.SplitterDistance = 368
-        Me.SplitContainer1.TabIndex = 2
+        Me.SplitContainer1.TabIndex = 4
         '
         'btnRepL2
         '
@@ -442,7 +442,7 @@ Partial Class CZRegistroEspesores
         Me.btnRepL2.Name = "btnRepL2"
         Me.btnRepL2.Size = New System.Drawing.Size(46, 37)
         Me.btnRepL2.Style = MetroFramework.MetroColorStyle.Brown
-        Me.btnRepL2.TabIndex = 110
+        Me.btnRepL2.TabIndex = 12
         Me.btnRepL2.UseSelectable = True
         '
         'btnGuargarLII
@@ -482,7 +482,7 @@ Partial Class CZRegistroEspesores
         Me.txtsup21.ShortcutsEnabled = True
         Me.txtsup21.Size = New System.Drawing.Size(69, 20)
         Me.txtsup21.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtsup21.TabIndex = 4
+        Me.txtsup21.TabIndex = 8
         Me.txtsup21.UseSelectable = True
         Me.txtsup21.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtsup21.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -544,7 +544,7 @@ Partial Class CZRegistroEspesores
         Me.txtsup22.ShortcutsEnabled = True
         Me.txtsup22.Size = New System.Drawing.Size(69, 20)
         Me.txtsup22.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtsup22.TabIndex = 7
+        Me.txtsup22.TabIndex = 9
         Me.txtsup22.UseSelectable = True
         Me.txtsup22.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtsup22.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -640,7 +640,7 @@ Partial Class CZRegistroEspesores
         Me.txtmed23.ShortcutsEnabled = True
         Me.txtmed23.Size = New System.Drawing.Size(69, 20)
         Me.txtmed23.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtmed23.TabIndex = 9
+        Me.txtmed23.TabIndex = 7
         Me.txtmed23.UseSelectable = True
         Me.txtmed23.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtmed23.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -724,7 +724,7 @@ Partial Class CZRegistroEspesores
         Me.txtmed21.ShortcutsEnabled = True
         Me.txtmed21.Size = New System.Drawing.Size(69, 20)
         Me.txtmed21.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtmed21.TabIndex = 3
+        Me.txtmed21.TabIndex = 5
         Me.txtmed21.UseSelectable = True
         Me.txtmed21.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtmed21.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -768,7 +768,7 @@ Partial Class CZRegistroEspesores
         Me.txtinf22.ShortcutsEnabled = True
         Me.txtinf22.Size = New System.Drawing.Size(69, 20)
         Me.txtinf22.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtinf22.TabIndex = 5
+        Me.txtinf22.TabIndex = 3
         Me.txtinf22.UseSelectable = True
         Me.txtinf22.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtinf22.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -810,7 +810,7 @@ Partial Class CZRegistroEspesores
         Me.txtinf23.ShortcutsEnabled = True
         Me.txtinf23.Size = New System.Drawing.Size(69, 20)
         Me.txtinf23.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtinf23.TabIndex = 8
+        Me.txtinf23.TabIndex = 4
         Me.txtinf23.UseSelectable = True
         Me.txtinf23.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtinf23.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -876,7 +876,7 @@ Partial Class CZRegistroEspesores
         Me.btnRepL1.Name = "btnRepL1"
         Me.btnRepL1.Size = New System.Drawing.Size(46, 37)
         Me.btnRepL1.Style = MetroFramework.MetroColorStyle.Brown
-        Me.btnRepL1.TabIndex = 112
+        Me.btnRepL1.TabIndex = 12
         Me.btnRepL1.UseSelectable = True
         '
         'lblps1
@@ -935,7 +935,7 @@ Partial Class CZRegistroEspesores
         Me.txtsup11.ShortcutsEnabled = True
         Me.txtsup11.Size = New System.Drawing.Size(69, 20)
         Me.txtsup11.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtsup11.TabIndex = 4
+        Me.txtsup11.TabIndex = 8
         Me.txtsup11.UseSelectable = True
         Me.txtsup11.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtsup11.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -966,7 +966,7 @@ Partial Class CZRegistroEspesores
         Me.txtsup12.ShortcutsEnabled = True
         Me.txtsup12.Size = New System.Drawing.Size(69, 20)
         Me.txtsup12.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtsup12.TabIndex = 7
+        Me.txtsup12.TabIndex = 9
         Me.txtsup12.UseSelectable = True
         Me.txtsup12.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtsup12.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1028,7 +1028,7 @@ Partial Class CZRegistroEspesores
         Me.txtmed13.ShortcutsEnabled = True
         Me.txtmed13.Size = New System.Drawing.Size(69, 20)
         Me.txtmed13.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtmed13.TabIndex = 9
+        Me.txtmed13.TabIndex = 7
         Me.txtmed13.UseSelectable = True
         Me.txtmed13.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtmed13.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1090,7 +1090,7 @@ Partial Class CZRegistroEspesores
         Me.txtmed11.ShortcutsEnabled = True
         Me.txtmed11.Size = New System.Drawing.Size(69, 20)
         Me.txtmed11.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtmed11.TabIndex = 3
+        Me.txtmed11.TabIndex = 5
         Me.txtmed11.UseSelectable = True
         Me.txtmed11.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtmed11.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1132,7 +1132,7 @@ Partial Class CZRegistroEspesores
         Me.txtinf12.ShortcutsEnabled = True
         Me.txtinf12.Size = New System.Drawing.Size(69, 20)
         Me.txtinf12.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtinf12.TabIndex = 5
+        Me.txtinf12.TabIndex = 3
         Me.txtinf12.UseSelectable = True
         Me.txtinf12.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtinf12.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1174,7 +1174,7 @@ Partial Class CZRegistroEspesores
         Me.txtinf13.ShortcutsEnabled = True
         Me.txtinf13.Size = New System.Drawing.Size(69, 20)
         Me.txtinf13.Style = MetroFramework.MetroColorStyle.Brown
-        Me.txtinf13.TabIndex = 8
+        Me.txtinf13.TabIndex = 4
         Me.txtinf13.UseSelectable = True
         Me.txtinf13.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtinf13.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -1241,7 +1241,7 @@ Partial Class CZRegistroEspesores
         Me.dtfecha.Name = "dtfecha"
         Me.dtfecha.Size = New System.Drawing.Size(86, 25)
         Me.dtfecha.Style = MetroFramework.MetroColorStyle.Brown
-        Me.dtfecha.TabIndex = 3
+        Me.dtfecha.TabIndex = 5
         '
         'CZRegistroEspesores
         '

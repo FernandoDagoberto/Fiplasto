@@ -24,10 +24,10 @@ Partial Class Paradas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dtfecha = New System.Windows.Forms.DateTimePicker()
         Me.dthi = New System.Windows.Forms.DateTimePicker()
         Me.dthf = New System.Windows.Forms.DateTimePicker()
@@ -56,11 +56,11 @@ Partial Class Paradas
         Me.cbreparo = New MetroFramework.Controls.MetroComboBox()
         Me.btnagregar = New MetroFramework.Controls.MetroButton()
         Me.btncancelar = New MetroFramework.Controls.MetroButton()
-        Me.txtarea = New MetroFramework.Controls.MetroTextBox()
         Me.Label9 = New MetroFramework.Controls.MetroLabel()
         Me.cblinea = New MetroFramework.Controls.MetroComboBox()
         Me.lbllinea = New MetroFramework.Controls.MetroLabel()
         Me.dg = New MetroFramework.Controls.MetroGrid()
+        Me.cbarea = New MetroFramework.Controls.MetroComboBox()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -447,37 +447,6 @@ Partial Class Paradas
         Me.btncancelar.UseSelectable = True
         Me.btncancelar.Visible = False
         '
-        'txtarea
-        '
-        '
-        '
-        '
-        Me.txtarea.CustomButton.Image = Nothing
-        Me.txtarea.CustomButton.Location = New System.Drawing.Point(70, 2)
-        Me.txtarea.CustomButton.Name = ""
-        Me.txtarea.CustomButton.Size = New System.Drawing.Size(15, 15)
-        Me.txtarea.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtarea.CustomButton.TabIndex = 1
-        Me.txtarea.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtarea.CustomButton.UseSelectable = True
-        Me.txtarea.CustomButton.Visible = False
-        Me.txtarea.Lines = New String(-1) {}
-        Me.txtarea.Location = New System.Drawing.Point(28, 88)
-        Me.txtarea.MaxLength = 32767
-        Me.txtarea.Name = "txtarea"
-        Me.txtarea.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtarea.ReadOnly = True
-        Me.txtarea.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtarea.SelectedText = ""
-        Me.txtarea.SelectionLength = 0
-        Me.txtarea.SelectionStart = 0
-        Me.txtarea.ShortcutsEnabled = True
-        Me.txtarea.Size = New System.Drawing.Size(88, 20)
-        Me.txtarea.TabIndex = 0
-        Me.txtarea.UseSelectable = True
-        Me.txtarea.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtarea.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -518,30 +487,30 @@ Partial Class Paradas
         Me.dg.AllowUserToDeleteRows = False
         Me.dg.AllowUserToResizeColumns = False
         Me.dg.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender
-        Me.dg.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender
+        Me.dg.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dg.BackgroundColor = System.Drawing.Color.Silver
         Me.dg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg.DefaultCellStyle = DataGridViewCellStyle7
         Me.dg.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dg.EnableHeadersVisualStyles = False
         Me.dg.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -551,14 +520,14 @@ Partial Class Paradas
         Me.dg.Name = "dg"
         Me.dg.ReadOnly = True
         Me.dg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dg.RowHeadersVisible = False
         Me.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -568,15 +537,26 @@ Partial Class Paradas
         Me.dg.UseCustomForeColor = True
         Me.dg.UseStyleColors = True
         '
+        'cbarea
+        '
+        Me.cbarea.FontSize = MetroFramework.MetroComboBoxSize.Small
+        Me.cbarea.FormattingEnabled = True
+        Me.cbarea.ItemHeight = 19
+        Me.cbarea.Location = New System.Drawing.Point(17, 88)
+        Me.cbarea.Name = "cbarea"
+        Me.cbarea.Size = New System.Drawing.Size(99, 25)
+        Me.cbarea.TabIndex = 83
+        Me.cbarea.UseSelectable = True
+        '
         'Paradas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(668, 561)
+        Me.Controls.Add(Me.cbarea)
         Me.Controls.Add(Me.dg)
         Me.Controls.Add(Me.lbllinea)
         Me.Controls.Add(Me.cblinea)
-        Me.Controls.Add(Me.txtarea)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btncancelar)
         Me.Controls.Add(Me.btnagregar)
@@ -644,9 +624,9 @@ Partial Class Paradas
     Friend WithEvents cbreparo As MetroComboBox
     Friend WithEvents btnagregar As MetroButton
     Friend WithEvents btncancelar As MetroButton
-    Friend WithEvents txtarea As MetroTextBox
     Friend WithEvents Label9 As MetroLabel
     Friend WithEvents cblinea As MetroComboBox
     Friend WithEvents lbllinea As MetroLabel
     Friend WithEvents dg As MetroGrid
+    Friend WithEvents cbarea As MetroComboBox
 End Class

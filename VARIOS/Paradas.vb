@@ -44,7 +44,7 @@ Public Class Paradas
     Sub llenasector()
         sql9 = "SELECT DISTINCT sector.SECTOR_ID,SECTOR.SECTOR_DESC FROM AREA INNER JOIN " &
             "SECTOR ON AREA.AREA_ID =SECTOR.AREA_ID INNER JOIN PARADAS ON SECTOR.SECTOR_ID = PARADAS.SECTOR_ID " &
-            "WHERE AREA.AREA_DESC = '" + txtarea.Text + "'"
+            "WHERE AREA.AREA_DESC = '" + cbarea.Text + "'"
         da9 = New SqlDataAdapter(sql9, cnn)
         dt9 = New DataTable
         da9.Fill(dt9)
@@ -115,7 +115,7 @@ Public Class Paradas
         "dbo.PARADAMAQ.tiempo as Tiempo,dbo.CAUSA.CAUSA_DESC as Causa, dbo.MOTIVO.MOTIVO_DESC as Motivo, dbo.PARADAMAQ.eq_cod as EqCod, dbo.PARADAMAQ.eq_desc as EqDescr, dbo.PARADAS.PARADAS_DESC as Parada, " &
         "dbo.PARADAMAQ.parada as CodParada, dbo.PARADAMAQ.observacion as Observacion, dbo.REPARO.REPARO_DESC as Reparo FROM dbo.PARADAMAQ INNER JOIN dbo.CAUSA ON dbo.PARADAMAQ.causa = dbo.CAUSA.CAUSA_ID INNER JOIN " &
         "dbo.MOTIVO ON dbo.PARADAMAQ.motivo_id = dbo.MOTIVO.MOTIVO_ID INNER JOIN dbo.PARADAS ON dbo.PARADAMAQ.parada = dbo.PARADAS.PARADAS_ID INNER JOIN " &
-        "dbo.REPARO ON dbo.PARADAMAQ.reparo = dbo.REPARO.REPARO_ID where dbo.PARADAMAQ.fecha='" + dtfecha.Text + "' and PARADAMAQ.area='" + txtarea.Text + "'"
+        "dbo.REPARO ON dbo.PARADAMAQ.reparo = dbo.REPARO.REPARO_ID where dbo.PARADAMAQ.fecha='" + dtfecha.Text + "' and PARADAMAQ.area='" + cbarea.Text + "'"
 
         da1 = New SqlDataAdapter(sql1, cnn)
         dt1 = New DataTable
@@ -171,7 +171,7 @@ Public Class Paradas
 
         campos = "area, linea, fecha, turno, grupo, tiempo1, tiempo2, tiempo, causa, motivo_id, eq_cod, eq_desc, parada, observacion, reparo, user_alta, fch_alta"
 
-        variables = "'" + txtarea.Text + "','" + Str(lineaprod) + "','" + dtfecha.Text + "','" + cbturno.Text + "','" + cbgrupo.Text + "', '" + dthi.Text + "','" + dthf.Text + "', " &
+        variables = "'" + cbarea.Text + "','" + Str(lineaprod) + "','" + dtfecha.Text + "','" + cbturno.Text + "','" + cbgrupo.Text + "', '" + dthi.Text + "','" + dthf.Text + "', " &
         "'" + txttotal.Text + "','" + cbcausa.SelectedValue + "','" + cbmotivo.SelectedValue + "','" + txtsec.Text + "', " &
         "'" + cbsec.Text + "','" + txtparada.Text + "','" + txtobs.Text + "','" + cbreparo.SelectedValue + "', " &
         "'" + user + "','" + Now + "'"
@@ -183,7 +183,7 @@ Public Class Paradas
             "motivo_id='" + cbmotivo.SelectedValue + "', eq_cod='" + txtsec.Text + "', eq_desc='" + cbsec.Text + "', " &
             "parada='" + txtparada.Text + "', observacion='" + txtobs.Text + "',reparo='" + cbreparo.SelectedValue + "', " &
             "user_mod='" + user + "',fch_mod='" + Now + "' " &
-           "where fecha='" + dtfecha.Text + "' and turno='" + cbturno.Text + "' and grupo='" + cbgrupo.Text + "' and tiempo1='" + dthi.Text + "'"
+           "where id='" + Trim(line) + "'"
         End If
         cmd3 = New SqlCommand(SQL3, cnn)
         cmd3.Connection.Open()
@@ -237,7 +237,7 @@ Public Class Paradas
             cblinea.Text = dg.CurrentRow.Cells("Linea").Value
         End If
 
-        txtarea.Text = dg.CurrentRow.Cells("Area").Value
+        cbarea.Text = dg.CurrentRow.Cells("Area").Value
         dtfecha.Value = dg.CurrentRow.Cells("Fecha").Value
         cbturno.Text = dg.CurrentRow.Cells("Turno").Value
         cbgrupo.Text = dg.CurrentRow.Cells("Grupo").Value
@@ -285,7 +285,7 @@ Public Class Paradas
         Call buscadatos()
     End Sub
 
-    Private Sub dg_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
+    Private Sub dg_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles dg.KeyUp
         If e.KeyCode = Keys.Delete Then
             If dtfecha.Text = Now.Date Then
                 ms = MetroMessageBox.Show(Me, "¿Desea eliminar la causa la parada seleccionada?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
@@ -316,24 +316,40 @@ Public Class Paradas
     Sub cargaarea()
         conex("area")
 
-        sql1 = "SELECT  area.area_id,AREA.AREA_DESC FROM PERFIL INNER JOIN AREA ON PERFIL.PERFIL_AREA = AREA.AREA_ID INNER JOIN " &
-                "USUARIOS ON PERFIL.PERFIL_ID = USUARIOS.user_perfil where Usuarios.user_apenom='" + user + "'"
-
+        sql1 = "SELECT  AREA.AREA_DESC as Area,PERFIL.PERFIL_CARGO,PERFIL.PERFIL_AREA FROM PERFIL INNER JOIN AREA ON PERFIL.PERFIL_AREA = AREA.AREA_ID INNER JOIN " &
+                " USUARIOS ON PERFIL.PERFIL_ID = USUARIOS.user_perfil where Usuarios.user_apenom='" + user + "' order by AREA.AREA_DESC"
         da1 = New SqlDataAdapter(sql1, cnn)
         dt1 = New DataTable
         da1.Fill(dt1)
         n = dt1.Rows.Count
         If n = 0 Then
-            MetroMessageBox.Show(Me, "El usuario no tiene perfil para cargar novedades", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MetroMessageBox.Show(Me, "El usuario no tiene perfil para cargar paradas", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Me.Close()
         Else
-            txtarea.Text = dt1.Rows(0).Item("area_desc")
-            If txtarea.Text = "MC" Then
-                lbllinea.Visible = True
-                cblinea.Visible = True
+            If dt1.Rows(0).Item("perfil_cargo") = "S" Then
+                Dim whe As String
+                whe = "where area_relacion ='" + Trim(dt1.Rows(0).Item("perfil_area")) + "' order by area_desc"
+                llenacbwhere("area", whe)
+
+                cbarea.DataSource = dt9
+                cbarea.DisplayMember = "area_desc"
+                cbarea.ValueMember = "area_desc"
+            Else
+                cbarea.DataSource = dt1
+                cbarea.DisplayMember = "Area"
+                cbarea.ValueMember = "Area"
+                cbarea.Enabled = False
+
+                If cbarea.Text = "MC" Then
+                    lbllinea.Visible = True
+                    cblinea.Visible = True
+                End If
             End If
         End If
+    End Sub
 
+    Private Sub cbarea_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbarea.SelectionChangeCommitted
+        llenasector()
     End Sub
 
 End Class
