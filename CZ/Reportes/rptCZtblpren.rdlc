@@ -1213,6 +1213,14 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Fields!czzcargadas_linea.Value</Value>
+          </SortExpression>
+          <SortExpression>
+            <Value>=Fields!czzcargadas_fecha.Value</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>0.25cm</Top>
         <Left>0.75cm</Left>
         <Height>2.99682cm</Height>

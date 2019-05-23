@@ -39,7 +39,7 @@ Public Class PIModiMad
     Friend WithEvents cbgrupo As MetroComboBox
     Friend WithEvents dtfecha As MetroDateTime
     Friend WithEvents Label1 As MetroLabel
-    Friend WithEvents dthora As MetroDateTime
+    Friend WithEvents dthora As DateTimePicker
     Friend WithEvents gb1 As System.Windows.Forms.GroupBox
     Friend WithEvents txthhegr As MetroTextBox
     Friend WithEvents Label5 As MetroLabel
@@ -102,7 +102,7 @@ Public Class PIModiMad
         Me.cbturno = New MetroFramework.Controls.MetroComboBox()
         Me.dtfecha = New MetroFramework.Controls.MetroDateTime()
         Me.Label1 = New MetroFramework.Controls.MetroLabel()
-        Me.dthora = New MetroFramework.Controls.MetroDateTime()
+        Me.dthora = New System.Windows.Forms.DateTimePicker()
         Me.gb1 = New System.Windows.Forms.GroupBox()
         Me.txthhegr = New MetroFramework.Controls.MetroTextBox()
         Me.Label5 = New MetroFramework.Controls.MetroLabel()
@@ -269,7 +269,7 @@ Public Class PIModiMad
         'dthora
         '
         Me.dthora.CustomFormat = "HH:mm:ss"
-        Me.dthora.FontSize = MetroFramework.MetroDateTimeSize.Small
+        Me.dthora.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dthora.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dthora.Location = New System.Drawing.Point(102, 38)
         Me.dthora.MinimumSize = New System.Drawing.Size(0, 25)
@@ -287,7 +287,7 @@ Public Class PIModiMad
         Me.gb1.Controls.Add(Me.dtfecha)
         Me.gb1.Controls.Add(Me.cbturno)
         Me.gb1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb1.ForeColor = Color.Black
+        Me.gb1.ForeColor = System.Drawing.Color.Black
         Me.gb1.Location = New System.Drawing.Point(41, 241)
         Me.gb1.Name = "gb1"
         Me.gb1.Size = New System.Drawing.Size(200, 129)
@@ -368,7 +368,7 @@ Public Class PIModiMad
         Me.gbMad.Controls.Add(Me.Label6)
         Me.gbMad.Controls.Add(Me.cbMadera)
         Me.gbMad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbMad.ForeColor = Color.Black
+        Me.gbMad.ForeColor = System.Drawing.Color.Black
         Me.gbMad.Location = New System.Drawing.Point(271, 241)
         Me.gbMad.Name = "gbMad"
         Me.gbMad.Size = New System.Drawing.Size(200, 110)

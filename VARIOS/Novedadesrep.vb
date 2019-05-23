@@ -48,7 +48,9 @@ Public Class Novedadesrep
 
                 'Si no es supervisor carga el area del operario
 
-                cbsector.Text = dt1.Rows(0).Item("area_desc")
+                cbsector.DataSource = dt1
+                cbsector.DisplayMember = "area_desc"
+                cbsector.ValueMember = "area_desc"
                 cbsector.Enabled = False
                 chktodos.Visible = False
 

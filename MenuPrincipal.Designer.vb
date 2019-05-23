@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MenuPrincipal
-    Inherits MetroFramework.Forms.MetroForm
+    Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -233,7 +233,7 @@ Partial Class MenuPrincipal
         'MN
         '
         Me.MN.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MNArchivos, Me.MNPorteria, Me.MNBasicos, Me.MNBiomasa, Me.MNMadera, Me.MNRevestidos, Me.MNReportes, Me.MNDescr, Me.MNPANEL})
-        Me.MN.Location = New System.Drawing.Point(0, 30)
+        Me.MN.Location = New System.Drawing.Point(0, 0)
         Me.MN.Name = "MN"
         Me.MN.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.MN.Size = New System.Drawing.Size(973, 24)
@@ -1196,14 +1196,10 @@ Partial Class MenuPrincipal
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MN)
         Me.Cursor = System.Windows.Forms.Cursors.Default
-        Me.DisplayHeader = False
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MN
         Me.Name = "MenuPrincipal"
-        Me.Padding = New System.Windows.Forms.Padding(0, 30, 0, 0)
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation
-        Me.TransparencyKey = System.Drawing.Color.Empty
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()

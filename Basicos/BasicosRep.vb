@@ -103,24 +103,9 @@ Public Class BasicosRep
             Dim dtPrensadas As New PRODUCCIONDataSet.prensadasDataTable
             dsPrensadas.Fill(dtPrensadas, fchIM, fchH)
 
-            ConectMySql()
-            cnnMySql.Open()
-
             stepBarra = CalculaStep(dtPrensadas.Rows.Count)
 
             For Each fila As DataRow In dtPrensadas.Rows
-
-                Dim query As String = "SELECT linea,producto.prd_descrp as PRODUCTO,producto.prd_factor AS FACTOR,aberturas,decorativo,TIMESTAMP(novedades.fecha,novedades.hora) AS FECHA " &
-                                      " FROM novedades inner join producto on producto.ID=novedades.producto " &
-                                "where novedades.id=(select max(ni.id) from novedades ni where ni.linea='" + Str(fila.Item("linea")) + "'" &
-                                "and " &
-                                "TIMESTAMP(ni.fecha,ni.hora)<='" + Format(fila.Item("fecha"), "yyyy-MM-dd HH:mm:ss") + "')"
-                Dim MySqlDA As MySqlDataAdapter
-                Dim conjuntoDeDatos As New DataSet
-                Dim MySqlDT As New DataTable
-
-                MySqlDA = New MySqlDataAdapter(query, cnnMySql)
-                MySqlDA.Fill(conjuntoDeDatos, "Novedades")
 
                 Dim fechaturno As DateTime
                 fch = fila.Item("fecha")
@@ -142,15 +127,14 @@ Public Class BasicosRep
 
                 cnn.Close()
 
-
                 With datosInforme
                     .Fecha = fila.Item("Fecha")
                     .Linea = fila.Item("linea")
                     .Prensada = fila.Item("prensada")
-                    .Producto = conjuntoDeDatos.Tables(0).Rows(0).Item("producto")
-                    .Factor = conjuntoDeDatos.Tables(0).Rows(0).Item("factor")
-                    .Aberturas = conjuntoDeDatos.Tables(0).Rows(0).Item("aberturas")
-                    .Decorativo = conjuntoDeDatos.Tables(0).Rows(0).Item("decorativo")
+                    .Producto = fila.Item("producto")
+                    .Factor = fila.Item("factor")
+                    .Aberturas = fila.Item("aberturas")
+                    .Decorativo = fila.Item("decorativo")
                     If String.IsNullOrEmpty(dt.Rows(0).Item("Merma").ToString) Then
                         .Merma = 0
                     Else
@@ -179,8 +163,6 @@ Public Class BasicosRep
                 End If
 
             Next
-
-            cnnMySql.Close()
 
             valorBarra = 0
             BarraProgreso.Value = valorBarra

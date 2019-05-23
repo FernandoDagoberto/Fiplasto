@@ -136,7 +136,12 @@ Public Class Remitos
                     fecha = dt.Rows(0).Item("fechaegr")
                 End If
 
-                RemitoPI = Str(dt.Rows(0).Item("remitopi"))
+                If IsDBNull(dt.Rows(0).Item("remitopi")) Then
+                    RemitoPI = 0
+                Else
+                    RemitoPI = dt.Rows(0).Item("remitopi")
+                End If
+
                 Madera = dt.Rows(0).Item("pdesc")
                 Bruto = dt.Rows(0).Item("pesobruto")
                 Tara = dt.Rows(0).Item("pesotara")

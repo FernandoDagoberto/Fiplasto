@@ -542,12 +542,22 @@ Public Class LAVINOX
         'Muestra en los datagrid de la derecha todos los inoxidables que se encuentran en la línea
 
         dtLineaI = llenoInoxEnLinea(1)
-        dgLineaI.DataSource = dtLineaI
-        dgLineaI.Columns("Linea").Visible = False
+        If dtLineaI IsNot Nothing Then
+            dgLineaI.DataSource = dtLineaI
+            dgLineaI.Columns("Linea").Visible = False
+        Else
+            dgLineaI.DataSource = Nothing
+        End If
+
 
         dtLineaII = llenoInoxEnLinea(2)
-        dgLineaII.DataSource = dtLineaII
-        dgLineaII.Columns("Linea").Visible = False
+        If dtLineaII IsNot Nothing Then
+            dgLineaII.DataSource = dtLineaII
+            dgLineaII.Columns("Linea").Visible = False
+        Else
+            dgLineaII.DataSource = Nothing
+        End If
+
     End Sub
 
     Private Sub cbInox_SelectionChangeCommitted(ByVal sender As Object, ByVal e As System.EventArgs) Handles cbInox.SelectionChangeCommitted

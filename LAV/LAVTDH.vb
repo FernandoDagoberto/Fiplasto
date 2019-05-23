@@ -137,7 +137,7 @@ Public Class LAVTDH
 
         Call conexion()
 
-        sql1 = "SELECT lavthd_id as ID, lavtdh_fecha as Fecha,lavtdh_ingegr as Mov,lavtdh_linea as Linea,lavtdh_turno as Turno,lavtdh_grupo as Grupo " &
+        sql1 = "SELECT lavtdh_id as ID, lavtdh_fecha as Fecha,lavtdh_ingegr as Mov,lavtdh_linea as Linea,lavtdh_turno as Turno,lavtdh_grupo as Grupo " &
                 ",lavtdh_cantidad as Cantidad,lavtdh_ntejido as NTejido,lavtdh_razon as Razon,lavtdh_destino as Destino  from LAVTDH  " &
             "where  LAVTDH_INGEGR='" + ingegr + "' and LAVTDH_FECHA>='" + fechaant + "' and LAVTDH_FECHA<='" + fch + "' and LAVTDH_bajaid='0' order by LAVTDH_fecha"
         da1 = New SqlDataAdapter(sql1, cnn)
