@@ -148,7 +148,7 @@ Partial Class MCrep
         Me.GroupBox1.Controls.Add(Me.rbparaf)
         Me.GroupBox1.Controls.Add(Me.rbcuchillas)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = Color.Black
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New System.Drawing.Point(45, 63)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(334, 142)

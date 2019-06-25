@@ -132,6 +132,7 @@ Partial Class MenuPrincipal
         Me.MNBiomasa = New System.Windows.Forms.ToolStripMenuItem()
         Me.MNBIyC = New System.Windows.Forms.ToolStripMenuItem()
         Me.MNBAj = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MNBDescarte = New System.Windows.Forms.ToolStripMenuItem()
         Me.MNMadera = New System.Windows.Forms.ToolStripMenuItem()
         Me.MNMRemitos = New System.Windows.Forms.ToolStripMenuItem()
         Me.MNMProveedores = New System.Windows.Forms.ToolStripMenuItem()
@@ -184,6 +185,7 @@ Partial Class MenuPrincipal
         Me.TimerMCLV = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMCTELAS = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMCTQBL = New System.Windows.Forms.Timer(Me.components)
+        Me.MNRBDescartes = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MN.SuspendLayout()
         Me.SuspendLayout()
@@ -856,7 +858,7 @@ Partial Class MenuPrincipal
         '
         'MNBiomasa
         '
-        Me.MNBiomasa.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MNBIyC, Me.MNBAj})
+        Me.MNBiomasa.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MNBIyC, Me.MNBAj, Me.MNBDescarte})
         Me.MNBiomasa.Name = "MNBiomasa"
         Me.MNBiomasa.Size = New System.Drawing.Size(64, 20)
         Me.MNBiomasa.Text = "Biomasa"
@@ -872,6 +874,12 @@ Partial Class MenuPrincipal
         Me.MNBAj.Name = "MNBAj"
         Me.MNBAj.Size = New System.Drawing.Size(179, 22)
         Me.MNBAj.Text = "Ajuste de Inventario"
+        '
+        'MNBDescarte
+        '
+        Me.MNBDescarte.Name = "MNBDescarte"
+        Me.MNBDescarte.Size = New System.Drawing.Size(179, 22)
+        Me.MNBDescarte.Text = "Descarte"
         '
         'MNMadera
         '
@@ -993,7 +1001,7 @@ Partial Class MenuPrincipal
         '
         'MNRBiomasa
         '
-        Me.MNRBiomasa.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MNRBInfprod})
+        Me.MNRBiomasa.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MNRBInfprod, Me.MNRBDescartes})
         Me.MNRBiomasa.Name = "MNRBiomasa"
         Me.MNRBiomasa.Size = New System.Drawing.Size(175, 22)
         Me.MNRBiomasa.Text = "Biomasa"
@@ -1187,6 +1195,12 @@ Partial Class MenuPrincipal
         '
         Me.TimerMCTQBL.Interval = 14400000
         '
+        'MNRBDescartes
+        '
+        Me.MNRBDescartes.Name = "MNRBDescartes"
+        Me.MNRBDescartes.Size = New System.Drawing.Size(196, 22)
+        Me.MNRBDescartes.Text = "Descartes"
+        '
         'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1369,4 +1383,6 @@ Partial Class MenuPrincipal
     Friend WithEvents MNPorteria As ToolStripMenuItem
     Friend WithEvents MNPRemitos As ToolStripMenuItem
     Friend WithEvents MNPSalida As ToolStripMenuItem
+    Friend WithEvents MNBDescarte As ToolStripMenuItem
+    Friend WithEvents MNRBDescartes As ToolStripMenuItem
 End Class

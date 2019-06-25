@@ -1256,7 +1256,6 @@ Partial Class CZRegistroEspesores
         Me.Controls.Add(Me.cbturno)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cbgrupo)
-        Me.MaximizeBox = False
         Me.Name = "CZRegistroEspesores"
         Me.Style = MetroFramework.MetroColorStyle.Brown
         Me.Text = "Registro de espesores"

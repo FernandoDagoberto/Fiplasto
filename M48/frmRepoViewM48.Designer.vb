@@ -23,34 +23,42 @@ Partial Class frmRepoViewM48
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.RepoView = New Microsoft.Reporting.WinForms.ReportViewer()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.CRTLSULFENSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FIPLANEWDataSetTotal = New SPIF.FIPLANEWDataSetTotal()
+        Me.RepoView = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.CRTLSULFALUBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRTLSULFALUTableAdapter = New SPIF.FIPLANEWDataSetTotalTableAdapters.CRTLSULFALUTableAdapter()
-        Me.CRTLSULFENSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CRTLSULFENSTableAdapter = New SPIF.FIPLANEWDataSetTotalTableAdapters.CRTLSULFENSTableAdapter()
+        Me.CRTLVARBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CRTLVARTableAdapter = New SPIF.FIPLANEWDataSetTotalTableAdapters.CRTLVARTableAdapter()
+        CType(Me.CRTLSULFENSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FIPLANEWDataSetTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CRTLSULFALUBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CRTLSULFENSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRTLVARBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'RepoView
+        'CRTLSULFENSBindingSource
         '
-        Me.RepoView.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource2.Name = "FIPLANEWDataSetTotal_CRTLSULFENS"
-        ReportDataSource2.Value = Me.CRTLSULFENSBindingSource
-        Me.RepoView.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.RepoView.LocalReport.ReportEmbeddedResource = "SPIF.Rptm48ensayo.rdlc"
-        Me.RepoView.Location = New System.Drawing.Point(5, 60)
-        Me.RepoView.Name = "RepoView"
-        Me.RepoView.Size = New System.Drawing.Size(899, 396)
-        Me.RepoView.TabIndex = 0
+        Me.CRTLSULFENSBindingSource.DataMember = "CRTLSULFENS"
+        Me.CRTLSULFENSBindingSource.DataSource = Me.FIPLANEWDataSetTotal
         '
         'FIPLANEWDataSetTotal
         '
         Me.FIPLANEWDataSetTotal.DataSetName = "FIPLANEWDataSetTotal"
         Me.FIPLANEWDataSetTotal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RepoView
+        '
+        Me.RepoView.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "FIPLANEWDataSetTotal_CRTLVAR"
+        ReportDataSource1.Value = Me.CRTLVARBindingSource
+        Me.RepoView.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.RepoView.LocalReport.ReportEmbeddedResource = "SPIF.rptM48var.rdlc"
+        Me.RepoView.Location = New System.Drawing.Point(5, 60)
+        Me.RepoView.Name = "RepoView"
+        Me.RepoView.Size = New System.Drawing.Size(899, 396)
+        Me.RepoView.TabIndex = 0
         '
         'CRTLSULFALUBindingSource
         '
@@ -61,14 +69,18 @@ Partial Class frmRepoViewM48
         '
         Me.CRTLSULFALUTableAdapter.ClearBeforeFill = True
         '
-        'CRTLSULFENSBindingSource
-        '
-        Me.CRTLSULFENSBindingSource.DataMember = "CRTLSULFENS"
-        Me.CRTLSULFENSBindingSource.DataSource = Me.FIPLANEWDataSetTotal
-        '
         'CRTLSULFENSTableAdapter
         '
         Me.CRTLSULFENSTableAdapter.ClearBeforeFill = True
+        '
+        'CRTLVARBindingSource
+        '
+        Me.CRTLVARBindingSource.DataMember = "CRTLVAR"
+        Me.CRTLVARBindingSource.DataSource = Me.FIPLANEWDataSetTotal
+        '
+        'CRTLVARTableAdapter
+        '
+        Me.CRTLVARTableAdapter.ClearBeforeFill = True
         '
         'frmRepoViewM48
         '
@@ -79,10 +91,11 @@ Partial Class frmRepoViewM48
         Me.Name = "frmRepoViewM48"
         Me.Padding = New System.Windows.Forms.Padding(5, 60, 5, 5)
         Me.Style = MetroFramework.MetroColorStyle.Green
-        Me.WindowState = FormWindowState.Maximized
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.CRTLSULFENSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FIPLANEWDataSetTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CRTLSULFALUBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CRTLSULFENSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRTLVARBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -93,4 +106,6 @@ Partial Class frmRepoViewM48
     Friend WithEvents CRTLSULFALUTableAdapter As FIPLANEWDataSetTotalTableAdapters.CRTLSULFALUTableAdapter
     Friend WithEvents CRTLSULFENSBindingSource As BindingSource
     Friend WithEvents CRTLSULFENSTableAdapter As FIPLANEWDataSetTotalTableAdapters.CRTLSULFENSTableAdapter
+    Friend WithEvents CRTLVARBindingSource As BindingSource
+    Friend WithEvents CRTLVARTableAdapter As FIPLANEWDataSetTotalTableAdapters.CRTLVARTableAdapter
 End Class

@@ -101,6 +101,14 @@ Public Class frmREPOViewMC
                 Me.Text = ""
                 señalrepo = "dataset"
 
+            Case "Telas"
+                'Aquí le indicamos qué informe usar
+                RepoView.LocalReport.ReportEmbeddedResource = "SPIF.rptMCTelas.rdlc"
+                parametros.Add(New Microsoft.Reporting.WinForms.ReportParameter("LineaD", lineaD))
+                parametros.Add(New Microsoft.Reporting.WinForms.ReportParameter("LineaH", lineaH))
+                Me.Text = "Cambio de Telas"
+                señalrepo = "dataset"
+
 
 
 

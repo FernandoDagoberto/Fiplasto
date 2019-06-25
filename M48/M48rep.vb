@@ -25,11 +25,13 @@ Public Class M48rep
         End If
 
         If chktodos.Checked = False Then
+            turno = cbturno.Text
             'Para reportes de report viewer
             turnoD = cbturno.Text
             turnoH = cbturno.Text
 
         Else
+            turno = "all"
             'Para reportes de report viewer
             turnoD = "0"
             turnoH = "9999"
@@ -38,11 +40,13 @@ Public Class M48rep
 
 
         If chklinea.Checked = False Then
+            linea = cblinea.Text
             'Para reportes de report viewer
             lineaD = cblinea.Text
             lineaH = cblinea.Text
 
         Else
+            linea = "all"
             'Para reportes de report viewer
             lineaD = "0"
             lineaH = "9"
@@ -56,15 +60,26 @@ Public Class M48rep
         If cbensayos.Checked = True Then
             nivdet = "ensayosM48"
         ElseIf cbctrl.Checked = True Then
+            repo = "Crystal"
             nivdet = "ctrlfibras"
         ElseIf cbbolsas.Checked = True Then
             nivdet = "bolsas"
         ElseIf cbvar.Checked = True Then
+            repo = "Crystal"
             nivdet = "variables"
         End If
         '***************************************
-        Dim repo As New frmRepoViewM48
-        repo.Show()
+        Dim reporte As New Form
+        If repo = "Crystal" Then
+            reporte = frmrepm48
+        Else
+            reporte = frmRepoViewM48
+        End If
+        reporte.Show()
+
+        repo = Nothing
+
+
 
 
     End Sub
@@ -85,6 +100,7 @@ Public Class M48rep
         Else
             cblinea.Enabled = True
         End If
+
 
 
     End Sub

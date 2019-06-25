@@ -13,8 +13,7 @@ Public Class MCrep
 
 
     Private Sub MCrep_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call habilitalinea()
-        repo = ""
+
     End Sub
 
 
@@ -98,6 +97,9 @@ Public Class MCrep
         ElseIf rbvalv.Checked Then
             dt = reporte.RepoCanerias
             nivdet = "Canerias"
+        ElseIf rbtelas.Checked Then
+            dt = reporte.RepoTelas
+            nivdet = "Telas"
         End If
 
         If dt.Rows.Count = 0 Then
@@ -129,68 +131,11 @@ Public Class MCrep
         End If
     End Sub
 
-
-    Sub habilitalinea()
+    Private Sub HabilitaLinea(sender As Object, e As EventArgs) Handles rbvar.CheckedChanged, rbvalv.CheckedChanged, rbtelas.CheckedChanged, rbpreparaf.CheckedChanged, rbparaf.CheckedChanged, rblimp.CheckedChanged, rbhipo.CheckedChanged, rbenstq.CheckedChanged, rbensmaq.CheckedChanged, rbcuchillas.CheckedChanged
         If rbcuchillas.Checked = True Or rbhipo.Checked = True Or rblimp.Checked = True Or rbparaf.Checked = True Or rbtelas.Checked = True Or rbvar.Checked = True Or rbensmaq.Checked = True Then
             plLinea.Visible = True
         Else
             plLinea.Visible = False
         End If
     End Sub
-
-
-    Private Sub rbcuchillas_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbcuchillas.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-    Private Sub rbparaf_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbparaf.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-    Private Sub rbhipo_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbhipo.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-
-    Private Sub rblimp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rblimp.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-    Private Sub rbvalv_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbvalv.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-    Private Sub rbtelas_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbtelas.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-
-    Private Sub rbpreparaf_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbpreparaf.CheckedChanged
-        Call habilitalinea()
-        repo = "Crystal"
-    End Sub
-
-
-    Private Sub rbenstq_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbenstq.CheckedChanged
-        Call habilitalinea()
-        repo = "RepoView"
-    End Sub
-
-    Private Sub rbensmaq_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbensmaq.CheckedChanged
-        Call habilitalinea()
-        repo = "RepoView"
-    End Sub
-
-
-    Private Sub rbvar_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbvar.CheckedChanged
-        Call habilitalinea()
-        repo = "RepoView"
-    End Sub
-
 End Class

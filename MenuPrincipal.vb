@@ -1068,6 +1068,10 @@ Public Class MenuPrincipal
                         If ptomn = "MNBAJ" Then
                             MNBAj.Visible = False
                         End If
+                        '-- AJUSTES--
+                        If ptomn = "MNBDESCARTE" Then
+                            MNBDescarte.Visible = False
+                        End If
 
 
 
@@ -1866,6 +1870,18 @@ Public Class MenuPrincipal
     Private Sub MNPANEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MNPANEL.Click
         Dim apanel As New PanelGraficos
         apanel.Show()
+    End Sub
+
+    Private Sub MNBDescarte_Click(sender As Object, e As EventArgs) Handles MNBDescarte.Click
+        Dim bioDes As New DescarteBio
+        bioDes.MdiParent = Me
+        bioDes.Show()
+    End Sub
+
+    Private Sub MNRBDescartes_Click(sender As Object, e As EventArgs) Handles MNRBDescartes.Click
+        Dim bioRep As New DescarteRep
+        bioRep.MdiParent = Me
+        bioRep.Show()
     End Sub
 
     Private Sub MNATBLInox_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MNATBLInox.Click

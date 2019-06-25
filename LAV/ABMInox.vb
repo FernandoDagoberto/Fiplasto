@@ -207,4 +207,6 @@ Public Class ABMInox
     Private Sub chkbaja_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkbaja.CheckedChanged
 
     End Sub
+
+
 End Class

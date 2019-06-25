@@ -67,6 +67,7 @@ Public Class frmRepoViewM48
 
 
 
+
             Case "realvsobjetivo"
                 Reporte2.Name = "DataSet1"
                 Reporte2.Value = Me.FIPLANEWDataSetTotal.MaderaPicada
@@ -202,6 +203,7 @@ Public Class frmRepoViewM48
 
 
     Private Sub frmRepoViewM48_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
 
         Me.RepoView.RefreshReport()

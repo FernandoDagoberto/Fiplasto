@@ -167,6 +167,26 @@ Public Class MCReporte
     End Function
 
 
+    Public Function RepoTelas() As DataTable
+        sql = "  Select camtela_fecha As Fecha, camtela_mc As Linea,camtela_turno As Turno,camtela_grupo As Grupo, 
+                        camtela_tela AS Tela, telas_mts AS Metros,camtela_razon AS Razon, camtela_prov AS Proveedor, 
+                       camtela_userid AS Usuario
+                        FROM MCTELAS INNER JOIN
+                        MCCAMTELAS ON MCTELAS.telas_tela = MCCAMTELAS.camtela_tela
+                where camtela_fecha>='" + FechaD + "' and camtela_fecha<='" + FechaH + "' " &
+               "And camtela_mc >='" + LineaD + "' and camtela_mc<='" + LineaH + "' And camtela_turno >='" + TurnoD + "' and camtela_turno<='" + TurnoH + "'and camtela_bajaid is null " &
+               "order by camtela_fecha"
+        da = New SqlDataAdapter(sql, cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        Return dt
+    End Function
+
+
+
+
+
+
 
 #End Region
 

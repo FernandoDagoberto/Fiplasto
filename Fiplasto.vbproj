@@ -200,6 +200,23 @@
     <Compile Include="Basicos\frmRepoBasicos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BIOMASA\BiomasaPeso.vb" />
+    <Compile Include="BIOMASA\DescarteBio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\DescarteRep.Designer.vb">
+      <DependentUpon>DescarteRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\DescarteRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\frmREPOViewBiomasa.Designer.vb">
+      <DependentUpon>frmREPOViewBiomasa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BIOMASA\frmREPOViewBiomasa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BIOMASA\Reportes\BioReporte.vb" />
     <Compile Include="cMenu.vb" />
     <Compile Include="CZ\Reportes\CZReporte.vb" />
     <Compile Include="DataSetEnsayosMC1.Designer.vb">
@@ -288,7 +305,7 @@
     <Compile Include="BIOMASA\IngCamBioRep.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BIOMASA\rptInfContBio.vb">
+    <Compile Include="BIOMASA\Reportes\rptInfContBio.vb">
       <DependentUpon>rptInfContBio.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
@@ -1081,9 +1098,19 @@
     <EmbeddedResource Include="BIOMASA\AjusteBio.resx">
       <DependentUpon>AjusteBio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\DescarteBio.resx">
+      <DependentUpon>DescarteBio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BIOMASA\Biomasa.resx">
       <DependentUpon>Biomasa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\DescarteRep.resx">
+      <DependentUpon>DescarteRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\frmREPOViewBiomasa.resx">
+      <DependentUpon>frmREPOViewBiomasa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BIOMASA\Reportes\rptDescarteBio.rdlc" />
     <EmbeddedResource Include="BIOMASA\TRMADBIO.resx">
       <DependentUpon>TRMADBIO.vb</DependentUpon>
     </EmbeddedResource>
@@ -1096,7 +1123,7 @@
     <EmbeddedResource Include="BIOMASA\IngCamBioRep.resx">
       <DependentUpon>IngCamBioRep.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BIOMASA\rptInfContBio.rpt">
+    <EmbeddedResource Include="BIOMASA\Reportes\rptInfContBio.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptInfContBio.vb</LastGenOutput>
     </EmbeddedResource>
@@ -1131,6 +1158,7 @@
     <EmbeddedResource Include="MC\Reportes\rptMcCuchillas.rdlc" />
     <EmbeddedResource Include="MC\Reportes\rptMcHipo.rdlc" />
     <EmbeddedResource Include="MC\Reportes\rptMcLimpVac.rdlc" />
+    <EmbeddedResource Include="MC\Reportes\rptMCTelas.rdlc" />
     <EmbeddedResource Include="MC\Reportes\rptMCVacVal.rdlc" />
     <EmbeddedResource Include="MC\Reportes\rptMCParafina.rdlc" />
     <EmbeddedResource Include="MC\Reportes\rptMCParafCon.rdlc" />

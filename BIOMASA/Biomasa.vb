@@ -353,7 +353,7 @@ Public Class Biomasa
         Me.gbconforme.Controls.Add(Me.rbpila)
         Me.gbconforme.Controls.Add(Me.rbConsumo)
         Me.gbconforme.Enabled = False
-        Me.gbconforme.ForeColor = Color.Black
+        Me.gbconforme.ForeColor = System.Drawing.Color.Black
         Me.gbconforme.Location = New System.Drawing.Point(18, 142)
         Me.gbconforme.Name = "gbconforme"
         Me.gbconforme.Size = New System.Drawing.Size(142, 129)
@@ -926,6 +926,10 @@ Public Class Biomasa
         Else
             MetroMessageBox.Show(Me, "No existen relacion entre codigo de tipo de madera y codigo de balanza", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub TPIngreso_Click(sender As Object, e As EventArgs) Handles TPIngreso.Click
+
     End Sub
 
     Private Sub btnbusco_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnbusco.Click

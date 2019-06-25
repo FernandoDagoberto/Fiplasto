@@ -160,7 +160,7 @@ Partial Class ABMInox
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender
         Me.dg.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dg.BackgroundColor = System.Drawing.Color.Silver
+        Me.dg.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dg.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None

@@ -619,14 +619,14 @@ Partial Class CZZorrasCargadas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(943, 450)
         Me.Controls.Add(Me.dtfecha)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.encabezado)
         Me.Controls.Add(Me.TabControl1)
-        Me.MaximizeBox = False
         Me.Name = "CZZorrasCargadas"
-        Me.Resizable = False
         Me.Style = MetroFramework.MetroColorStyle.Brown
         Me.Text = "Tableros cargados"
         Me.encabezado.ResumeLayout(False)

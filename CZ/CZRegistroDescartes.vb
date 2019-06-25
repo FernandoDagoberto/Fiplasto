@@ -386,7 +386,7 @@ Public Class CZRegistroDescartes
         DataGrid_DoubleClick(1)
     End Sub
 
-    Private Sub btnGuargarLII_Click(sender As Object, e As EventArgs)
+    Private Sub btnGuargarLII_Click(sender As Object, e As EventArgs) Handles btnGuargarLII.Click
         Guardar("Linea2", 2)
     End Sub
 
